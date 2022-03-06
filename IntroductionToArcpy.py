@@ -1,11 +1,11 @@
 import arcpy
 
-arcpy.env.workspace = r"C:\Users\wcarter\Documents\ArcPy"
+arcpy.env.workspace = r"WorkspacePath"
 wksp = arcpy.env.workspace
 arcpy.env.overwriteOutput = True
-desc = arcpy.Describe(r"C:\Users\wcarter\Documents\ArcPy")
+desc = arcpy.Describe(rf"{wksp}")
 
-fc = "C:/Users/wcarter/Documents/ArcPy/Practice.gdb"
+fc = f"{wksp}/GDB.gdb"
 
 arcpy.CreateFileGDB_management(wksp, "castles")
 
